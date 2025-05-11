@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Adda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-film" style="color: #ff0000; font-size: 28px;"></i>
+            <h1>Movies Adda</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search movies...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+            <button>Sign In</button>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="filters">
+            <div class="filter-dropdown">
+                <div class="filter-dropdown-btn">
+                    <i class="fas fa-filter"></i> Filters
+                </div>
+                <div class="filter-dropdown-content">
+                    <h4>Year Range</h4>
+                    <div class="year-range">
+                        <input type="number" id="min-year" placeholder="Min" min="1900" max="2020" value="2000">
+                        <span>to</span>
+                        <input type="number" id="max-year" placeholder="Max" min="1900" max="2020" value="2020">
+                    </div>
+                    <h4>Languages</h4>
+                    <div class="language-option" data-lang="all">All Languages</div>
+                    <div class="language-option" data-lang="hindi">Hindi</div>
+                    <div class="language-option" data-lang="english">English</div>
+                    <div class="language-option" data-lang="telugu">Telugu</div>
+                    <div class="language-option" data-lang="tamil">Tamil</div>
+                </div>
+            </div>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="action">Action</button>
+            <button class="filter-btn" data-filter="comedy">Comedy</button>
+            <button class="filter-btn" data-filter="drama">Drama</button>
+        </div>
+
+        <div class="movies-grid" id="movies-container">
+            <!-- Movie cards will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
